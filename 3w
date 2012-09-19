@@ -18,7 +18,7 @@
     <div class="wrapper">
       <header>
         <h1 class="header">Camvas</h1>
-        <p class="header">A tutorial-ish example for a webcam stream to canvas elements</p>
+        <p class="header">A tutorial-ish example for a Canvas/WebRTC interaction (streams webcam images to canvas element)</p>
 
         <ul>
           <li class="download"><a class="buttons" href="https://github.com/cbrandolino/camvas/zipball/master">Download ZIP</a></li>
@@ -31,28 +31,14 @@
 
       </header>
       <section>
-        <h3>Live demo</h3>
-        <p>This demo only works on the most recent versions of chrome, firefox and opera (possibly explorer too, but I would not vouch on it.)</p>
-        <p>Some browser will ask you for permissions to use your webcam: accept it in order to see the demo in action</p>
-        <canvas width=680 height=240></canvas>
          <h3>Annotated code</h3>
          <p>If you, like me, can't wait to experiment with the endless possibilities that using canvas on webcam images can give developers,
          this <a href="docs/camvas.html">annotated source code</a> (laid out by the invaluable <a href="http://jashkenas.github.com/docco/">Docco</a>)
          is just waiting for you - go and have a blast!</p>
-        <h3>More info</h3>
-        <p>Here are some useful resources to learn more about HTML5 video, canvas, WebRTC and how they work together</p>
-        <ul>
-          <li>
-            <a href="http://www.html5rocks.com/en/tutorials/getusermedia/intro/">Capturing audio and video in HTML5</a> (HTML5 rocks)
-          </li>
-          <li>
-            <a href="http://answers.oreilly.com/topic/2896-how-to-display-a-video-on-html5-canvas/">Display video on HTML5 canvas</a> (O'Reilly media, slightly outdated)
-          </li>
-          <li>
-            <a href="http://neave.com/webcam/html5/">A great example of the canvas + WebRTC potential</a> (neave.com)
-          </li>
-      
-        </ul>
+        <h3>Live demo</h3>
+        <p>This demo only works on the most recent versions of chrome, firefox and opera (possibly explorer too, but I would not vouch on it.)</p>
+        <p>Some browser will ask you for permissions to use your webcam: accept it in order to see the demo in action</p>
+        <canvas width=640 height=480></canvas>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
