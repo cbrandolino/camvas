@@ -35,8 +35,8 @@ function camvas() {
   this.video.setAttribute('autoplay', '1')
 
   // The video should fill out all of the canvas
-  this.video.setAttribute('width', this.ctx.width)
-  this.video.setAttribute('height', this.ctx.width)
+  this.video.setAttribute('width', this.ctx.canvas.width)
+  this.video.setAttribute('height', this.ctx.canvas.height)
 
   this.video.setAttribute('style', 'display:none')
   streamContainer.appendChild(this.video)
