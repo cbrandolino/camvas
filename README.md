@@ -1,6 +1,19 @@
 # Camvas
-A tutorial-ish example for a webcam stream to canvas elements.
 
-Uses WebRTC, Canvas and HTML5 Video
+A simple HTML5 library to stream a webcam video to a `<canvas>` object. 
 
-Find annotated code, demo and useful resources at [http://cbrandolino.github.com/camvas](http://cbrandolino.github.com/camvas)
+Uses WebRTC (getUserMedia), Canvas and HTML5 Video
+
+## Example usage:
+
+  window.onload = function(){
+    var ctx = document.getElementsByTagName('canvas')[0].getContext('2d')
+    var draw = function(video, dt) {
+      ctx.drawImage(video, 0, 0)
+    }
+    var myCamvas = new camvas(ctx, draw)
+  }
+
+## Homepage
+
+You can find annotated source code, demo and useful resources at [http://cbrandolino.github.com/camvas](http://cbrandolino.github.com/camvas)
