@@ -2,7 +2,9 @@
 
 A simple HTML5 library to stream a webcam video to a `<canvas>` object. 
 
-Uses WebRTC (getUserMedia), Canvas and HTML5 Video
+Uses WebRTC (getUserMedia), Canvas and HTML5 Video.
+
+Check out a sample application, too: [camvas_photobooth](http://cbrandolino.github.io/camvas_photobooth/).
 
 ## Example usage:
   ```javascript
@@ -18,3 +20,4 @@ Uses WebRTC (getUserMedia), Canvas and HTML5 Video
 ## Homepage
 
 You can find annotated source code, demo and useful resources at [http://cbrandolino.github.com/camvas](http://cbrandolino.github.com/camvas)
+
