@@ -58,6 +58,8 @@ function camvas(ctx, drawFunc) {
     self.video.src = window.URL.createObjectURL(stream)
     // Let's start drawing the canvas!
     self.update()
+  }, function(err){
+    throw err
   })
 
   // As soon as we can draw a new frame on the canvas, we call the `draw` function 
