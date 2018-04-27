@@ -18,13 +18,24 @@ navigator.getUserMedia  = navigator.getUserMedia ||
                           navigator.webkitGetUserMedia ||
                           navigator.mozGetUserMedia || 
                           navigator.msGetUserMedia
-
+                          
 window.requestAnimationFrame = window.requestAnimationFrame ||
                                window.webkitRequestAnimationFrame ||
                                window.mozRequestAnimationFrame ||
                                window.msRequestAnimationFrame ||
                                window.oRequestAnimationFrame
 
+// Integrate navigator.getUserMedia & navigator.mediaDevices.getUserMedia
+function getUserMedia (constraints, successCallback, errorCallback) {
+  if (!constraints || !successCallback || !errorCallback) {return}
+  
+  if (navigator.mediaDevices) {
+    navigator.mediaDevices.getUserMedia(constraints).then(successCallback, errorCallback)
+  } else {
+    navigator.getUserMedia(constraints, successCallback, errorCallback)
+  }
+}
+                               
 // The function takes a canvas context and a `drawFunc` function.
 // `drawFunc` receives two parameters, the video and the time since
 // the last time it was called.
@@ -52,7 +63,7 @@ function camvas(ctx, drawFunc) {
   document.body.appendChild(streamContainer)
 
   // The callback happens when we are starting to stream the video.
-  navigator.getUserMedia({video: true}, function(stream) {
+  getUserMedia({video: true}, function(stream) {
     // Yay, now our webcam input is treated as a normal video and
     // we can start having fun
     self.video.src = window.URL.createObjectURL(stream)
